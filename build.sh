@@ -1,6 +1,6 @@
 #!/usr/bin/env bash -e
 
-SCALA_VERSION=2.11.8
+SCALA_VERSION=2.12.8
 
 . /code/binfu/scafu.sh
 
