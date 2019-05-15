@@ -40,7 +40,9 @@ public class Test {
     INVOKESPECIAL scala/Tuple10.<init> (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     ASTORE 2
     ALOAD 2
-    IFNULL L0
+    IFNONNULL L0
+    GOTO L1
+   L0
     ALOAD 2
     INVOKEVIRTUAL scala/Tuple10._1 ()Ljava/lang/Object;
     INVOKESTATIC scala/runtime/BoxesRunTime.unboxToInt (Ljava/lang/Object;)I
@@ -83,46 +85,62 @@ public class Test {
     ISTORE 12
     ICONST_1
     ILOAD 3
-    IF_ICMPNE L1
+    IF_ICMPEQ L2
+    GOTO L1
+   L2
     ICONST_2
     ILOAD 4
-    IF_ICMPNE L1
+    IF_ICMPEQ L3
+    GOTO L1
+   L3
     ICONST_3
     ILOAD 5
-    IF_ICMPNE L1
+    IF_ICMPEQ L4
+    GOTO L1
+   L4
     ICONST_4
     ILOAD 6
-    IF_ICMPNE L1
+    IF_ICMPEQ L5
+    GOTO L1
+   L5
     ICONST_5
     ILOAD 7
-    IF_ICMPNE L1
+    IF_ICMPEQ L6
+    GOTO L1
+   L6
     BIPUSH 6
     ILOAD 8
-    IF_ICMPNE L1
+    IF_ICMPEQ L7
+    GOTO L1
+   L7
     BIPUSH 7
     ILOAD 9
-    IF_ICMPNE L1
+    IF_ICMPEQ L8
+    GOTO L1
+   L8
     BIPUSH 8
     ILOAD 10
-    IF_ICMPNE L1
+    IF_ICMPEQ L9
+    GOTO L1
+   L9
     BIPUSH 9
     ILOAD 11
-    IF_ICMPNE L1
+    IF_ICMPEQ L10
+    GOTO L1
+   L10
     BIPUSH 10
     ILOAD 12
-    IF_ICMPNE L1
+    IF_ICMPEQ L11
+    GOTO L1
+   L11
     GETSTATIC scala/runtime/BoxedUnit.UNIT : Lscala/runtime/BoxedUnit;
     ASTORE 1
-    GOTO L2
+    GOTO L12
    L1
-    GOTO L3
-   L0
-    GOTO L3
-   L3
     GETSTATIC scala/runtime/BoxedUnit.UNIT : Lscala/runtime/BoxedUnit;
     ASTORE 1
-    GOTO L2
-   L2
+    GOTO L12
+   L12
     RETURN
     MAXSTACK = 12
     MAXLOCALS = 13
